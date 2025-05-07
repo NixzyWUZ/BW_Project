@@ -1,0 +1,66 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dr2dqau85cmbs"]
+
+[ext_resource type="Texture2D" uid="uid://bs47v4et8o8x1" path="res://Sprites/Tile/New Piskel-1.png.png" id="1_2ex5k"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1uvoa"]
+texture = ExtResource("1_2ex5k")
+texture_region_size = Vector2i(32, 32)
+1:0/size_in_atlas = Vector2i(5, 4)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 48)
+1:4/size_in_atlas = Vector2i(2, 2)
+1:4/0 = 0
+1:4/0/texture_origin = Vector2i(0, 16)
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -22, 25, -22, 25, 0, 29, 0, 29, 15.5, 30, 16, -30, 16, -28, -6, -26, -6, -26, -7, -10, -7)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -13, 4.5, -12, 10, 16, 6, 16, 6, 11.5, -6.5, 9.5, -7, 16, -10, 16)
+5:4/size_in_atlas = Vector2i(3, 2)
+5:4/0 = 0
+5:4/0/texture_origin = Vector2i(0, 16)
+10:0/size_in_atlas = Vector2i(3, 6)
+10:0/next_alternative_id = 2
+10:0/0 = 0
+10:0/0/texture_origin = Vector2i(0, 80)
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -160.5, 16, -160, 46, -156.5, 45, -54, 35.5, -43, -34, -44.5, -39, -49, -39, -154)
+10:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(18.5, -39, 18, -18, 15.5, -18, 15, -16, 6.5, -16, 6.5, -18, -22, -19, -21.5, -40)
+10:0/1 = 1
+10:0/1/texture_origin = Vector2i(0, 80)
+8:3/size_in_atlas = Vector2i(2, 1)
+8:3/animation_columns = 1
+8:3/animation_speed = 90.0
+8:3/animation_frame_0/duration = 1.0
+8:3/animation_frame_1/duration = 1.0
+8:3/animation_frame_2/duration = 1.0
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26, -15, 27, -12, 28.5, 16, -25, 16)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:6/0 = 0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:6/0 = 0
+10:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:6/0 = 0
+11:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+12:6/0 = 0
+12:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_1uvoa")
