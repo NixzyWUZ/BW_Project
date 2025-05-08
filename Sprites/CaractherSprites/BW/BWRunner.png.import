@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba6onwepet86s"
-path="res://.godot/imported/BW_crouch.png-9225582420353f527ace195cfa31fb74.ctex"
+uid="uid://cc2508reexoyd"
+path="res://.godot/imported/BWRunner.png-38b66ae9d943654f18cf5b57f60d0440.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/CaractherSprites/BW_crouch.png"
-dest_files=["res://.godot/imported/BW_crouch.png-9225582420353f527ace195cfa31fb74.ctex"]
+source_file="res://Sprites/CaractherSprites/BW/BWRunner.png"
+dest_files=["res://.godot/imported/BWRunner.png-38b66ae9d943654f18cf5b57f60d0440.ctex"]
 
 [params]
 

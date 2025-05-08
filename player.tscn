@@ -1,12 +1,12 @@
 [gd_scene load_steps=31 format=3 uid="uid://tcd6tjvt40h3"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3luhn"]
-[ext_resource type="Texture2D" uid="uid://c1goy6516l4jt" path="res://Sprites/CaractherSprites/BW.png" id="1_q3ax6"]
-[ext_resource type="Texture2D" uid="uid://cjqmyt228klkv" path="res://Sprites/CaractherSprites/BW_walk.png" id="2_cfhdp"]
-[ext_resource type="Texture2D" uid="uid://ba6onwepet86s" path="res://Sprites/CaractherSprites/BW_crouch.png" id="2_p333c"]
-[ext_resource type="Texture2D" uid="uid://dojcatwjdonj8" path="res://Sprites/CaractherSprites/BW_Fall-1.png.png" id="3_02xjb"]
-[ext_resource type="Texture2D" uid="uid://ddfp166rmwqiw" path="res://Sprites/CaractherSprites/BW_Jump.png" id="3_5i2a5"]
-[ext_resource type="Texture2D" uid="uid://cc2508reexoyd" path="res://Sprites/CaractherSprites/BWRunner.png" id="4_4kad2"]
+[ext_resource type="Texture2D" uid="uid://c1goy6516l4jt" path="res://Sprites/CaractherSprites/BW/BW.png" id="1_q3ax6"]
+[ext_resource type="Texture2D" uid="uid://cjqmyt228klkv" path="res://Sprites/CaractherSprites/BW/BW_walk.png" id="2_cfhdp"]
+[ext_resource type="Texture2D" uid="uid://ba6onwepet86s" path="res://Sprites/CaractherSprites/BW/BW_crouch.png" id="2_p333c"]
+[ext_resource type="Texture2D" uid="uid://dojcatwjdonj8" path="res://Sprites/CaractherSprites/BW/BW_Fall-1.png.png" id="3_02xjb"]
+[ext_resource type="Texture2D" uid="uid://ddfp166rmwqiw" path="res://Sprites/CaractherSprites/BW/BW_Jump.png" id="3_5i2a5"]
+[ext_resource type="Texture2D" uid="uid://cc2508reexoyd" path="res://Sprites/CaractherSprites/BW/BWRunner.png" id="4_4kad2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hyaiu"]
 atlas = ExtResource("2_p333c")
@@ -196,7 +196,7 @@ script = ExtResource("1_3luhn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rertj")
-animation = &"Fall"
+animation = &"IdleAM"
 autoplay = "IdleAM"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dr2dqau85cmbs"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dr2dqau85cmbs"]
 
 [ext_resource type="Texture2D" uid="uid://bs47v4et8o8x1" path="res://Sprites/Tile/New Piskel-1.png.png" id="1_2ex5k"]
+[ext_resource type="Texture2D" uid="uid://cnaw7ix0mensq" path="res://Sprites/Tile/House_TIle-1.png.png" id="1_vvmxm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1uvoa"]
 texture = ExtResource("1_2ex5k")
@@ -60,7 +61,15 @@ texture_region_size = Vector2i(32, 32)
 12:6/0 = 0
 12:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ldx8e"]
+texture = ExtResource("1_vvmxm")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(6, 4)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 48)
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_1uvoa")
+sources/2 = SubResource("TileSetAtlasSource_ldx8e")

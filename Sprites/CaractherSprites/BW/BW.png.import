@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2508reexoyd"
-path="res://.godot/imported/BWRunner.png-d3c2f9a53597303cca44daba659e7f4c.ctex"
+uid="uid://c1goy6516l4jt"
+path="res://.godot/imported/BW.png-ff9d05bceba56726d7c364f6793fe621.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/CaractherSprites/BWRunner.png"
-dest_files=["res://.godot/imported/BWRunner.png-d3c2f9a53597303cca44daba659e7f4c.ctex"]
+source_file="res://Sprites/CaractherSprites/BW/BW.png"
+dest_files=["res://.godot/imported/BW.png-ff9d05bceba56726d7c364f6793fe621.ctex"]
 
 [params]
 

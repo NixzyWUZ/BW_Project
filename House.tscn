@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=4 uid="uid://jseobcelaeg8"]
+
+[ext_resource type="Texture2D" uid="uid://dduxljaidt7uq" path="res://Sprites/Tile/House_Inside-1.png.png" id="1_50pxy"]
+[ext_resource type="Texture2D" uid="uid://bs47v4et8o8x1" path="res://Sprites/Tile/New Piskel-1.png.png" id="2_r51k4"]
+[ext_resource type="PackedScene" uid="uid://tcd6tjvt40h3" path="res://player.tscn" id="3_vbl2n"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rr2pb"]
+texture = ExtResource("1_50pxy")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(6, 4)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 48)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-89.5, -81, 30.5, -103, 93.5, -80.5, 86.5, 16, 85, 16, 86.5, -76.5, 32, -95, -83.5, -75.5, -81, 16, -82.5, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xlwg"]
+texture = ExtResource("2_r51k4")
+texture_region_size = Vector2i(32, 32)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:6/0 = 0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:6/0 = 0
+10:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:6/0 = 0
+11:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+12:6/0 = 0
+12:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:0/size_in_atlas = Vector2i(3, 6)
+10:0/0 = 0
+8:3/size_in_atlas = Vector2i(2, 1)
+8:3/0 = 0
+5:4/size_in_atlas = Vector2i(3, 2)
+5:4/0 = 0
+0:0/size_in_atlas = Vector2i(7, 4)
+0:0/0 = 0
+4:5/0 = 0
+1:4/size_in_atlas = Vector2i(2, 2)
+1:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uwink"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_rr2pb")
+sources/1 = SubResource("TileSetAtlasSource_4xlwg")
+
+[node name="House" type="Node2D"]
+
+[node name="WorldHM" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="WorldHM"]
+offset_right = 960.0
+offset_bottom = 640.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="WorldHM"]
+tile_map_data = PackedByteArray("AAAOAAoAAAAAAAAAAAAKAAcAAQAAAAYAAAAKAAgAAQAAAAYAAAAKAAkAAQAAAAYAAAAKAAoAAQAAAAYAAAAMAAsAAQAAAAYAAAANAAsAAQAAAAYAAAAOAAsAAQAAAAYAAAAPAAsAAQAAAAYAAAAQAAsAAQAAAAYAAAARAAsAAQAAAAYAAAASAAsAAQAAAAYAAAASAAoAAQAAAAYAAAASAAkAAQAAAAYAAAASAAgAAQAAAAYAAAASAAcAAQAAAAYAAAASAAYAAQAAAAYAAAARAAYAAQAAAAYAAAAQAAYAAQAAAAYAAAAPAAYAAQAAAAYAAAAOAAYAAQAAAAYAAAANAAYAAQAAAAYAAAAMAAYAAQAAAAYAAAALAAYAAQAAAAYAAAAKAAYAAQAAAAYAAAAKAAsAAQAAAAYAAAALAAsAAQAAAAYAAAA=")
+tile_set = SubResource("TileSet_uwink")
+
+[node name="Player" parent="WorldHM" instance=ExtResource("3_vbl2n")]
+position = Vector2(468, 320)

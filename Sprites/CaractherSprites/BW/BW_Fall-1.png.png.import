@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjqmyt228klkv"
-path="res://.godot/imported/BW_walk.png-15edecb12d08abfd675fadaed25d8eab.ctex"
+uid="uid://dojcatwjdonj8"
+path="res://.godot/imported/BW_Fall-1.png.png-12ea1929f40fea9e80133e47c3ca5e1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/CaractherSprites/BW_walk.png"
-dest_files=["res://.godot/imported/BW_walk.png-15edecb12d08abfd675fadaed25d8eab.ctex"]
+source_file="res://Sprites/CaractherSprites/BW/BW_Fall-1.png.png"
+dest_files=["res://.godot/imported/BW_Fall-1.png.png-12ea1929f40fea9e80133e47c3ca5e1e.ctex"]
 
 [params]
 

@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwbgdxe7inlqt"]
+
+[ext_resource type="Texture2D" uid="uid://cqonta4joylyi" path="res://Sprites/CaractherSprites/NPC's/XM.png" id="1_aq434"]
+[ext_resource type="Script" path="res://xm.gd" id="1_pw43j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1140e"]
+atlas = ExtResource("1_aq434")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk3yj"]
+atlas = ExtResource("1_aq434")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugqa4"]
+atlas = ExtResource("1_aq434")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytstn"]
+atlas = ExtResource("1_aq434")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6bbdc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1140e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk3yj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugqa4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytstn")
+}],
+"loop": true,
+"name": &"IdleXM",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8ar7"]
+size = Vector2(192, 64)
+
+[node name="XM" type="Sprite2D"]
+script = ExtResource("1_pw43j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6bbdc")
+animation = &"IdleXM"
+autoplay = "IdleXM"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_s8ar7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

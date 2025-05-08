@@ -11,6 +11,10 @@ const JUMP_VELOCITY = -400.0
 var is_running = false
 var speed
 
+func _reset_scene():
+	if Input.is_action_pressed("Reset"):
+		get_tree().reload_current_scene()
+
 func _physics_process(delta: float) -> void:
 	
 	print(velocity.x)
@@ -53,6 +57,8 @@ func _physics_process(delta: float) -> void:
 		
 	animacao_player(direction)
 	move_and_slide()
+	_reset_scene()
+
 
 func animacao_player(direction):
 

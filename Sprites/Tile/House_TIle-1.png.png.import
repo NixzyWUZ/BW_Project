@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dojcatwjdonj8"
-path="res://.godot/imported/BW_Fall-1.png.png-d4eeb642a94173c5988e39ee6a7cb850.ctex"
+uid="uid://cnaw7ix0mensq"
+path="res://.godot/imported/House_TIle-1.png.png-4385b30bc5d42985ead3779bd8d42f1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/CaractherSprites/BW_Fall-1.png.png"
-dest_files=["res://.godot/imported/BW_Fall-1.png.png-d4eeb642a94173c5988e39ee6a7cb850.ctex"]
+source_file="res://Sprites/Tile/House_TIle-1.png.png"
+dest_files=["res://.godot/imported/House_TIle-1.png.png-4385b30bc5d42985ead3779bd8d42f1c.ctex"]
 
 [params]
 
