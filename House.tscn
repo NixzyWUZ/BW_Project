@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dduxljaidt7uq" path="res://Sprites/Tile/House_Inside-1.png.png" id="1_50pxy"]
 [ext_resource type="Texture2D" uid="uid://bs47v4et8o8x1" path="res://Sprites/Tile/New Piskel-1.png.png" id="2_r51k4"]
-[ext_resource type="PackedScene" uid="uid://tcd6tjvt40h3" path="res://player.tscn" id="3_vbl2n"]
+[ext_resource type="PackedScene" uid="uid://cmopqf4qly815" path="res://player_house.tscn" id="3_n2j1l"]
 [ext_resource type="Texture2D" uid="uid://ckl6c56qw7m3t" path="res://Sprites/Comp_Sprites/News_Screen-1.png.png" id="4_5oe3r"]
 [ext_resource type="Script" path="res://comp_intr.gd" id="4_6dn44"]
 [ext_resource type="Script" path="res://exit_door.gd" id="4_xk3e3"]
@@ -104,7 +104,7 @@ metadata/_edit_use_anchors_ = true
 tile_map_data = PackedByteArray("AAAOAAoAAAAAAAAAAAAKAAcAAQAAAAYAAAAKAAgAAQAAAAYAAAAKAAkAAQAAAAYAAAAKAAoAAQAAAAYAAAAMAAsAAQAAAAYAAAANAAsAAQAAAAYAAAAOAAsAAQAAAAYAAAAPAAsAAQAAAAYAAAAQAAsAAQAAAAYAAAARAAsAAQAAAAYAAAASAAsAAQAAAAYAAAASAAoAAQAAAAYAAAASAAkAAQAAAAYAAAASAAgAAQAAAAYAAAASAAcAAQAAAAYAAAASAAYAAQAAAAYAAAARAAYAAQAAAAYAAAAQAAYAAQAAAAYAAAAPAAYAAQAAAAYAAAAOAAYAAQAAAAYAAAANAAYAAQAAAAYAAAAMAAYAAQAAAAYAAAALAAYAAQAAAAYAAAAKAAYAAQAAAAYAAAAKAAsAAQAAAAYAAAALAAsAAQAAAAYAAAA=")
 tile_set = SubResource("TileSet_uwink")
 
-[node name="Player" parent="WorldHM" instance=ExtResource("3_vbl2n")]
+[node name="PlayerHouse" parent="WorldHM" instance=ExtResource("3_n2j1l")]
 position = Vector2(425, 320)
 
 [node name="Leave_" type="Node2D" parent="WorldHM"]

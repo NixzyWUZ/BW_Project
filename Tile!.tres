@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://dr2dqau85cmbs"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://dr2dqau85cmbs"]
 
 [ext_resource type="Texture2D" uid="uid://bs47v4et8o8x1" path="res://Sprites/Tile/New Piskel-1.png.png" id="1_2ex5k"]
 [ext_resource type="Texture2D" uid="uid://qioaxm4teblg" path="res://Sprites/Tile/TilesTiles/Glass_tile-1.png.png" id="1_34ivp"]
 [ext_resource type="Texture2D" uid="uid://cnaw7ix0mensq" path="res://Sprites/Tile/House_TIle-1.png.png" id="1_vvmxm"]
+[ext_resource type="Texture2D" uid="uid://bdnsqa1lsthbj" path="res://Sprites/Tile/TilesTiles/Building_Tile.png" id="4_k8y2r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqq8c"]
 texture = ExtResource("1_34ivp")
@@ -85,9 +86,55 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, 48)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awmrp"]
+texture = ExtResource("4_k8y2r")
+texture_region_size = Vector2i(32, 32)
+5:1/size_in_atlas = Vector2i(3, 3)
+5:1/0 = 0
+5:1/0/texture_origin = Vector2i(0, 32)
+6:0/0 = 0
+7:0/0 = 0
+4:2/size_in_atlas = Vector2i(1, 2)
+4:2/0 = 0
+4:2/0/texture_origin = Vector2i(0, 16)
+1:2/size_in_atlas = Vector2i(3, 2)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, 16)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -19.2, 48, -19.2, 48, 16, -48, 16)
+0:1/0 = 0
+1:1/size_in_atlas = Vector2i(3, 1)
+1:1/0 = 0
+4:1/0 = 0
+2:0/0 = 0
+1:0/0 = 0
+4:0/size_in_atlas = Vector2i(2, 1)
+4:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+14:1/0 = 0
+14:2/0 = 0
+14:3/0 = 0
+11:1/size_in_atlas = Vector2i(3, 3)
+11:1/0 = 0
+11:1/0/texture_origin = Vector2i(0, 32)
+11:4/size_in_atlas = Vector2i(3, 2)
+11:4/0 = 0
+11:4/0/texture_origin = Vector2i(0, 16)
+10:4/size_in_atlas = Vector2i(1, 2)
+10:4/0 = 0
+10:4/0/texture_origin = Vector2i(0, 16)
+8:1/size_in_atlas = Vector2i(3, 3)
+8:1/0 = 0
+8:1/0/texture_origin = Vector2i(0, 32)
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_1uvoa")
 sources/2 = SubResource("TileSetAtlasSource_ldx8e")
 sources/0 = SubResource("TileSetAtlasSource_eqq8c")
+sources/3 = SubResource("TileSetAtlasSource_awmrp")

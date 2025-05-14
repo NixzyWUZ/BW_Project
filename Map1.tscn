@@ -88,7 +88,7 @@ tile_set = ExtResource("2_31vmp")
 position = Vector2(6256, 256)
 
 [node name="Player" parent="World" instance=ExtResource("2_l4c85")]
-position = Vector2(96, 224)
+position = Vector2(128, 224)
 
 [node name="House_Door" type="Area2D" parent="."]
 script = ExtResource("7_eg7y4")
@@ -99,3 +99,4 @@ shape = SubResource("RectangleShape2D_r4ti7")
 debug_color = Color(0.584698, 0.542048, 0.268661, 0.42)
 
 [connection signal="body_entered" from="House_Door" to="House_Door" method="_on_body_entered"]
+[connection signal="body_exited" from="House_Door" to="House_Door" method="_on_body_exited"]
