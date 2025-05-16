@@ -1,0 +1,154 @@
+[gd_scene load_steps=8 format=3 uid="uid://c048a6farj8b8"]
+
+[ext_resource type="FontFile" uid="uid://dxdq80sv186kn" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="1_bia7y"]
+[ext_resource type="Script" path="res://Scenes/end.gd" id="1_ihx1m"]
+[ext_resource type="PackedScene" uid="uid://244xyldxnjow" path="res://Scenes/menu.tscn" id="2_c1qvy"]
+
+[sub_resource type="Theme" id="Theme_cu3u7"]
+default_font = ExtResource("1_bia7y")
+
+[sub_resource type="Animation" id="Animation_0dwq8"]
+resource_name = "End_Demo"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ui_text/VBoxContainer/RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["This is the end of the demo. Thank you for trying my project. the longer version will be available soon in Itch.io (When finished i hope).
+
+Esse é o fim da demo(demonstração). Obrigado à você por tentar meu projeto. A versão mais longa estará disponível em breve no Itch.io (Quando terminado eu espero).
+
+
+
+
+-Nixzy"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ui_text/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.099, 0.198, 0.297, 0.396, 0.495, 0.594, 0.695, 0.792, 0.891, 0.99, 1.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5.5, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"_pause"
+}, {
+"args": [],
+"method": &"_changescene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_kn45g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ui_text/VBoxContainer/RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["This is the end of the demo. Thank you for trying my project. the longer version will be available soon in Itch.io (When finished i hope).
+
+Esse é o fim da demo(demonstração). Obrigado à você por tentar meu projeto. A versão mais longa estará disponível em breve no Itch.io (Quando terminado eu espero).
+
+
+
+
+-Nixzy"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ui_text/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33rle"]
+_data = {
+"End_Demo": SubResource("Animation_0dwq8"),
+"RESET": SubResource("Animation_kn45g")
+}
+
+[node name="End" type="Control" node_paths=PackedStringArray("Animation_Player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ihx1m")
+Animation_Player = NodePath("AnimationPlayer")
+change_scene = ExtResource("2_c1qvy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 640.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ui_text" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ui_text"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_cu3u7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Ui_text/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "This is the end of the demo. Thank you for trying my project. the longer version will be available soon in Itch.io (When finished i hope).
+
+Esse é o fim da demo(demonstração). Obrigado à você por tentar meu projeto. A versão mais longa estará disponível em breve no Itch.io (Quando terminado eu espero).
+
+
+
+
+-Nixzy"
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_33rle")
+}
+autoplay = "End_Demo"

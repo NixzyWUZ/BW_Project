@@ -12,7 +12,7 @@ config_version=5
 
 config/name="LilProjectBW"
 config/version="(Aplha)"
-run/main_scene="res://Map1.tscn"
+run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Cursor-1.png.png"
 
@@ -23,7 +23,18 @@ window/size/viewport_height=640
 window/size/window_width_override=1080
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="res://Cursor-1.png.png"
 window/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Fonts/": "red",
+"res://Musics/": "pink",
+"res://Scenes/": "orange",
+"res://Script/": "purple",
+"res://Sprites/": "green"
+}
 
 [input]
 

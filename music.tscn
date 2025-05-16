@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://4qrv5d6pd8wu"]
+
+[ext_resource type="AudioStream" uid="uid://derldjthdpscs" path="res://Musics/CITRUS!.mp3" id="1_08txf"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_08txf")
+autoplay = true
