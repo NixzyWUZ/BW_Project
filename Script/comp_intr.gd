@@ -11,7 +11,9 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "PlayerHouse":
 		_open_computer = true
+		$Interact.visible = true
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "PlayerHouse":
 		_open_computer = false
+		$Interact.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://d38q0aeu4whml"]
+[gd_scene load_steps=16 format=4 uid="uid://d38q0aeu4whml"]
 
 [ext_resource type="Texture2D" uid="uid://075mq38lx76y" path="res://Sprites/Tile/CloudBG-1.png.png" id="1_nskcm"]
 [ext_resource type="Texture2D" uid="uid://d2espqi28vpst" path="res://Sprites/BG_Parallax/parallax2-1.png.png" id="2_gdsj0"]
@@ -6,10 +6,163 @@
 [ext_resource type="TileSet" uid="uid://dr2dqau85cmbs" path="res://Tile!.tres" id="4_lx53g"]
 [ext_resource type="PackedScene" uid="uid://tcd6tjvt40h3" path="res://Scenes/player.tscn" id="5_bk1ci"]
 [ext_resource type="Script" path="res://Script/end.gd" id="6_r4oam"]
+[ext_resource type="Texture2D" uid="uid://botco0hvd36ex" path="res://Sprites/Tile/Missiel-1.png.png" id="7_5y8mb"]
+[ext_resource type="Script" path="res://Scenes/event.gd" id="7_bcagg"]
 [ext_resource type="PackedScene" uid="uid://4qrv5d6pd8wu" path="res://music.tscn" id="7_dhau6"]
+[ext_resource type="Texture2D" uid="uid://dljyofi2o00cu" path="res://Sprites/Tile/TilesTiles/Somke.png" id="8_dwj5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkebh"]
-size = Vector2(384, 160)
+size = Vector2(224, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kefx"]
+size = Vector2(192, 160)
+
+[sub_resource type="Animation" id="Animation_0pfgk"]
+resource_name = "Kaboom"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.233333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_5y8mb"), ExtResource("7_5y8mb"), ExtResource("8_dwj5k")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.233333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15872, 0), Vector2(15209, 640), Vector2(14973, 918), Vector2(14976, 912)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 4]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.233333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.785397, -0.785397, 0.0, 0.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("..")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_changetree"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lo8le"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_5y8mb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15872, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.785397]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_djgf3"]
+_data = {
+"Kaboom": SubResource("Animation_0pfgk"),
+"RESET": SubResource("Animation_lo8le")
+}
 
 [node name="Map2" type="Node2D"]
 
@@ -71,7 +224,7 @@ tile_map_data = PackedByteArray("AAAAAA8AAQAAAAYAAAAAABAAAQAAAAYAAAAAABEAAQAAAAY
 tile_set = ExtResource("4_lx53g")
 
 [node name="Player" parent="World/TilesAndTile" instance=ExtResource("5_bk1ci")]
-position = Vector2(256, 448)
+position = Vector2(544, 448)
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="World/TilesAndTile"]
 tile_map_data = PackedByteArray("AAB8AAsAAwAAAAQAAAB8AAoAAwAAAAQAAAB8AAkAAwAAAAQAAAB8AAgAAwAAAAQAAAB8AAcAAwAAAAQAAACPAAsAAwAAAAQAAACPAAoAAwAAAAQAAACPAAkAAwAAAAQAAACPAAgAAwAAAAQAAACPAAcAAwAAAAQAAAANAA4AAQAKAAAAAQAwAA4AAQAKAAAAAQBeAAgAAQAKAAAAAQBuAAgAAQAKAAAAAQB8AAYAAQAAAAYAAACPAAYAAQAAAAYAAAB9AAoAAwALAAIAAAB9AAsAAwALAAMAAAB9AAgAAwALAAIAAAB9AAkAAwALAAMAAAB9AAYAAwALAAEAAAB9AAcAAwALAAIAAAB+AAYAAwAMAAEAAAB/AAYAAwAMAAEAAACAAAYAAwAMAAEAAACBAAYAAwAMAAEAAACCAAYAAwAMAAEAAACDAAYAAwAMAAEAAACEAAYAAwAMAAEAAACFAAYAAwAMAAEAAACGAAYAAwAMAAEAAACHAAYAAwAMAAEAAACIAAYAAwAMAAEAAACJAAYAAwAMAAEAAACKAAYAAwAMAAEAAACLAAYAAwAMAAEAAACMAAYAAwAMAAEAAACNAAYAAwAMAAEAAACOAAYAAwANAAEAAACOAAcAAwANAAIAAACOAAgAAwANAAMAAACOAAkAAwANAAIAAACOAAoAAwANAAMAAACOAAsAAwANAAMAAAB+AAcAAwAMAAIAAAB+AAoAAwAMAAIAAAB+AAsAAwAMAAIAAAB/AAcAAwAMAAIAAAB/AAoAAwAMAAIAAAB/AAsAAwAMAAIAAACAAAcAAwAMAAIAAACAAAoAAwAMAAIAAACAAAsAAwAMAAIAAACBAAcAAwAMAAIAAACBAAgAAwAMAAIAAACBAAkAAwAMAAIAAACBAAoAAwAMAAIAAACBAAsAAwAMAAIAAACCAAcAAwAMAAIAAACCAAgAAwAMAAIAAACCAAkAAwAMAAIAAACCAAoAAwAMAAIAAACCAAsAAwAMAAIAAACDAAcAAwAMAAIAAACDAAgAAwAMAAIAAACDAAkAAwAMAAIAAACDAAoAAwAMAAIAAACDAAsAAwAMAAIAAACEAAcAAwAMAAIAAACEAAgAAwAMAAIAAACEAAkAAwAMAAIAAACEAAoAAwAMAAIAAACEAAsAAwAMAAIAAACFAAcAAwAMAAIAAACFAAgAAwAMAAIAAACFAAkAAwAMAAIAAACFAAoAAwAMAAIAAACFAAsAAwAMAAIAAACGAAcAAwAMAAIAAACGAAgAAwAMAAIAAACGAAkAAwAMAAIAAACGAAoAAwAMAAIAAACGAAsAAwAMAAIAAACHAAcAAwAMAAIAAACHAAgAAwAMAAIAAACHAAkAAwAMAAIAAACHAAoAAwAMAAIAAACHAAsAAwAMAAIAAACIAAcAAwAMAAIAAACIAAgAAwAMAAIAAACIAAkAAwAMAAIAAACIAAoAAwAMAAIAAACIAAsAAwAMAAIAAACJAAcAAwAMAAIAAACJAAgAAwAMAAIAAACJAAkAAwAMAAIAAACJAAoAAwAMAAIAAACJAAsAAwAMAAIAAACKAAcAAwAMAAIAAACKAAgAAwAMAAIAAACKAAkAAwAMAAIAAACKAAoAAwAMAAIAAACKAAsAAwAMAAIAAACLAAcAAwAMAAIAAACLAAgAAwAMAAIAAACLAAkAAwAMAAIAAACLAAoAAwAMAAIAAACLAAsAAwAMAAIAAACMAAcAAwAMAAIAAACMAAgAAwAMAAIAAACMAAkAAwAMAAIAAACMAAoAAwAMAAIAAACMAAsAAwAMAAIAAACNAAcAAwAMAAIAAACNAAgAAwAMAAIAAACNAAkAAwAMAAIAAACNAAoAAwAMAAIAAACNAAsAAwAMAAIAAAB+AAgAAwAMAAIAAAB+AAkAAwAMAAIAAAB/AAgAAwAMAAIAAAB/AAkAAwAMAAIAAACAAAgAAwAMAAIAAACAAAkAAwAMAAIAAAA=")
@@ -83,10 +236,32 @@ tile_set = ExtResource("4_lx53g")
 script = ExtResource("6_r4oam")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Areas/end"]
-position = Vector2(15136, 880)
+position = Vector2(15488, 864)
 shape = SubResource("RectangleShape2D_nkebh")
 debug_color = Color(0.317647, 0, 0.662745, 0.360784)
+
+[node name="Event" type="Area2D" parent="World/Areas"]
+script = ExtResource("7_bcagg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Areas/Event"]
+position = Vector2(14880, 880)
+shape = SubResource("RectangleShape2D_1kefx")
+debug_color = Color(0.416387, 0.591339, 0.369009, 0.42)
+
+[node name="MissielEvent" type="Node2D" parent="World/Areas/Event"]
+
+[node name="Sprite2D" type="Sprite2D" parent="World/Areas/Event/MissielEvent"]
+position = Vector2(15872, 0)
+rotation = -0.785397
+texture = ExtResource("7_5y8mb")
+hframes = 5
+
+[node name="EventExplosion" type="AnimationPlayer" parent="World/Areas/Event/MissielEvent"]
+libraries = {
+"": SubResource("AnimationLibrary_djgf3")
+}
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("7_dhau6")]
 
 [connection signal="body_entered" from="World/Areas/end" to="World/Areas/end" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Areas/Event" to="World/Areas/Event" method="_on_body_entered"]

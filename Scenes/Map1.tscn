@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bxadakumaut7n"]
+[gd_scene load_steps=16 format=4 uid="uid://bxadakumaut7n"]
 
 [ext_resource type="Texture2D" uid="uid://075mq38lx76y" path="res://Sprites/Tile/CloudBG-1.png.png" id="1_k5gxt"]
 [ext_resource type="Texture2D" uid="uid://d2espqi28vpst" path="res://Sprites/BG_Parallax/parallax2-1.png.png" id="2_k3thy"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://tcd6tjvt40h3" path="res://Scenes/player.tscn" id="11_4en61"]
 [ext_resource type="Script" path="res://Script/house_door.gd" id="12_l71hd"]
 [ext_resource type="PackedScene" uid="uid://4qrv5d6pd8wu" path="res://music.tscn" id="13_ciyhv"]
+[ext_resource type="PackedScene" uid="uid://c3ol6crmmj8xo" path="res://interact.tscn" id="13_wfsp6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4ti7"]
 size = Vector2(33.75, 64)
@@ -98,6 +99,10 @@ script = ExtResource("12_l71hd")
 position = Vector2(6121, 256)
 shape = SubResource("RectangleShape2D_r4ti7")
 debug_color = Color(0.584698, 0.542048, 0.268661, 0.42)
+
+[node name="Interact" parent="House_Door" instance=ExtResource("13_wfsp6")]
+visible = false
+position = Vector2(6120, 204)
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("13_ciyhv")]
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=4 uid="uid://jseobcelaeg8"]
+[gd_scene load_steps=21 format=4 uid="uid://jseobcelaeg8"]
 
 [ext_resource type="Texture2D" uid="uid://dduxljaidt7uq" path="res://Sprites/Tile/House_Inside-1.png.png" id="1_0nyi8"]
 [ext_resource type="Texture2D" uid="uid://bs47v4et8o8x1" path="res://Sprites/Tile/New Piskel-1.png.png" id="2_35742"]
 [ext_resource type="PackedScene" uid="uid://cmopqf4qly815" path="res://Scenes/player_house.tscn" id="3_g15sb"]
 [ext_resource type="Script" path="res://Script/exit_door.gd" id="4_4x46m"]
 [ext_resource type="Script" path="res://Script/comp_intr.gd" id="5_fuaj8"]
+[ext_resource type="PackedScene" uid="uid://c3ol6crmmj8xo" path="res://interact.tscn" id="6_3syin"]
 [ext_resource type="Script" path="res://Script/computer.gd" id="6_agigy"]
 [ext_resource type="Texture2D" uid="uid://ckl6c56qw7m3t" path="res://Sprites/Comp_Sprites/News_Screen-1.png.png" id="7_ils4j"]
 [ext_resource type="Texture2D" uid="uid://cp0yi65ttrbok" path="res://Sprites/Comp_Sprites/Icons_Tile.png" id="8_xx27p"]
@@ -126,6 +127,10 @@ script = ExtResource("5_fuaj8")
 position = Vector2(494, 320)
 shape = SubResource("RectangleShape2D_s16mn")
 debug_color = Color(0.582646, 0.542473, 0.275978, 0.42)
+
+[node name="Interact" parent="WorldHM/Computer/Comp_Intr" instance=ExtResource("6_3syin")]
+visible = false
+position = Vector2(494, 272)
 
 [node name="Computer" type="Control" parent="WorldHM/Computer"]
 layout_mode = 3
