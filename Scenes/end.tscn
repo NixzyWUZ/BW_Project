@@ -1,11 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c048a6farj8b8"]
+[gd_scene load_steps=7 format=3 uid="uid://c048a6farj8b8"]
 
-[ext_resource type="FontFile" uid="uid://dxdq80sv186kn" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="1_bia7y"]
 [ext_resource type="Script" path="res://Scenes/end.gd" id="1_ihx1m"]
 [ext_resource type="PackedScene" uid="uid://244xyldxnjow" path="res://Scenes/menu.tscn" id="2_c1qvy"]
-
-[sub_resource type="Theme" id="Theme_cu3u7"]
-default_font = ExtResource("1_bia7y")
+[ext_resource type="Theme" uid="uid://3a7caip40xij" path="res://Scenes/Font.tres" id="3_0jgxd"]
 
 [sub_resource type="Animation" id="Animation_0dwq8"]
 resource_name = "End_Demo"
@@ -130,7 +127,7 @@ offset_right = 150.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_cu3u7")
+theme = ExtResource("3_0jgxd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Ui_text/VBoxContainer"]
 layout_mode = 2

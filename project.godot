@@ -16,6 +16,10 @@ run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Cursor-1.png.png"
 
+[autoload]
+
+GlobalAnimation="*res://Scenes/global_animation.gd"
+
 [display]
 
 window/size/viewport_width=960

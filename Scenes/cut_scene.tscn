@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://ckgl3ic8jvbdm"]
+[gd_scene load_steps=13 format=4 uid="uid://ckgl3ic8jvbdm"]
 
 [ext_resource type="Script" path="res://Script/cut_scene.gd" id="1_ug00t"]
 [ext_resource type="PackedScene" uid="uid://d38q0aeu4whml" path="res://Scenes/map_2.tscn" id="2_td3rx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dkwjrq0gn8hcx" path="res://Sprites/BG_Parallax/parallax1-1.png.png" id="4_wl3ap"]
 [ext_resource type="TileSet" uid="uid://dr2dqau85cmbs" path="res://Tile!.tres" id="5_46q4w"]
 [ext_resource type="Texture2D" uid="uid://dojcatwjdonj8" path="res://Sprites/CaractherSprites/BW/BW_Fall-1.png.png" id="6_rwmoi"]
+[ext_resource type="Texture2D" uid="uid://cl525b0lxveh7" path="res://Sprites/UI/Next.png" id="7_51pnw"]
 [ext_resource type="Texture2D" uid="uid://cjqmyt228klkv" path="res://Sprites/CaractherSprites/BW/BW_walk.png" id="7_bedi7"]
 [ext_resource type="Texture2D" uid="uid://cc2508reexoyd" path="res://Sprites/CaractherSprites/BW/BWRunner.png" id="8_fruie"]
 
@@ -383,6 +384,12 @@ visible = false
 position = Vector2(-128, 160)
 texture = ExtResource("6_rwmoi")
 flip_h = true
+
+[node name="Button" type="Sprite2D" parent="Caracthers"]
+visible = false
+position = Vector2(864, 544)
+texture = ExtResource("7_51pnw")
+hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
