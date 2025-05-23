@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm4oacq7ngrus"]
+
+[ext_resource type="Texture2D" uid="uid://cq74ql5tf0ae3" path="res://Sprites/CaractherSprites/NPC's/MT.png" id="1_jffgs"]
+[ext_resource type="Script" path="res://Script/mt.gd" id="1_opvhq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7pb0"]
+atlas = ExtResource("1_jffgs")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kwrh"]
+atlas = ExtResource("1_jffgs")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdgod"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7pb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kwrh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_em1im"]
+size = Vector2(192, 64)
+
+[node name="MT" type="Sprite2D"]
+script = ExtResource("1_opvhq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bdgod")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_em1im")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

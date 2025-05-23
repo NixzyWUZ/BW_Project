@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca5c0ervs00qt"]
+
+[ext_resource type="Script" path="res://Script/qz.gd" id="1_7xu0d"]
+[ext_resource type="Texture2D" uid="uid://j07w51x51vms" path="res://Sprites/CaractherSprites/NPC's/QZ.png" id="1_dxvps"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58dbe"]
+atlas = ExtResource("1_dxvps")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qc7rm"]
+atlas = ExtResource("1_dxvps")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ufslq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58dbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qc7rm")
+}],
+"loop": true,
+"name": &"QZ_idle",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0otye"]
+size = Vector2(192, 64)
+
+[node name="QZ" type="Sprite2D"]
+script = ExtResource("1_7xu0d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ufslq")
+animation = &"QZ_idle"
+autoplay = "QZ_idle"
+frame_progress = 0.0381
+
+[node name="TurnArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TurnArea"]
+shape = SubResource("RectangleShape2D_0otye")
+
+[connection signal="body_entered" from="TurnArea" to="." method="_on_turn_area_body_entered"]
+[connection signal="body_exited" from="TurnArea" to="." method="_on_turn_area_body_exited"]

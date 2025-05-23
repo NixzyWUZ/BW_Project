@@ -14,10 +14,10 @@ tracks/0/path = NodePath("Text/VBoxContainer/RichTextLabel:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 2, 2.1, 4, 4.5, 4.6, 6, 6.5, 6.56667, 7.5, 8, 8.06667, 9, 9.06667, 10, 10.5, 11.5333, 12, 12.1, 14, 14.1, 15),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 2, 2.1, 4, 4.5, 4.6, 6, 6.5, 6.56667, 7.5, 8, 8.06667, 9, 9.06667, 10, 10.5, 11.5333, 12, 12.1, 13.5, 14, 14.1, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.103, 0.163, 0.203, 0.203, 1.0, 1.0, 0.0, 1.0, 3.93225e-07, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.103, 0.163, 0.203, 0.203, 1.0, 1.0, 0.0, 1.0, 1.0, 3.93225e-07, 1.0]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -26,7 +26,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1.5, 4, 6, 7.5, 11.5333, 14, 17),
+"times": PackedFloat32Array(1.5, 4, 6, 7.5, 11.5333, 13.5, 17),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
@@ -61,7 +61,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 2.1, 4.6, 6.56667, 8.06667, 12.1, 14.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Are u sure its a good idea to go with them?", "They looked pretty sure about it, and to be honest, its a opportunity that i'll never have again.", "Aleast they told where they will be? ", "They said it's near to where we are, and the fact that we go from the top of the building's it's faster", "Okay... Just... be careful, i think any place is waaay better than this city", "Don't worry.", "				 i will"]
+"values": ["Tem certeza que é bom ir com eles?", "Eles pareciam estar certo, ainda que essa pode ser minha última chance.", "Pelo menos disseram onde  irão estar?", "Parece ser próximo de onde estamos, e pelo fato de ir por cima dos prédios é mais rápido.", "Belê... Só... Tenha cuidado, qualquer lugar é melhor que aqui.", "Não se preucupe.", "				irei"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -168,6 +168,7 @@ script = ExtResource("1_rldjs")
 text_anime = NodePath("AnimationPlayer")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 960.0
 offset_bottom = 640.0
 color = Color(0, 0, 0, 1)

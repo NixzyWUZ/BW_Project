@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3ol6crmmj8xo"]
 
-[ext_resource type="Script" path="res://interact.gd" id="1_41qs2"]
+[ext_resource type="Script" path="res://Script/interact.gd" id="1_41qs2"]
 [ext_resource type="Texture2D" uid="uid://dc834vxu0wqoe" path="res://Sprites/UI/interact.png" id="1_kqtvj"]
 
 [sub_resource type="Animation" id="Animation_a4nh5"]

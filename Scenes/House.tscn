@@ -118,6 +118,10 @@ position = Vector2(425, 320)
 shape = SubResource("RectangleShape2D_oqtjn")
 debug_color = Color(0.642417, 0, 0.102819, 0.42)
 
+[node name="Interact" parent="WorldHM/Leave_/Exit_door" instance=ExtResource("6_3syin")]
+visible = false
+position = Vector2(425, 272)
+
 [node name="Computer" type="Node2D" parent="WorldHM"]
 
 [node name="Comp_Intr" type="Area2D" parent="WorldHM/Computer"]

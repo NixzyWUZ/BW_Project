@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dwbgdxe7inlqt"]
 
 [ext_resource type="Texture2D" uid="uid://cqonta4joylyi" path="res://Sprites/CaractherSprites/NPC's/XM.png" id="1_aq434"]
-[ext_resource type="Script" path="res://Script/xm.gd" id="1_pw43j"]
+[ext_resource type="Script" path="res://Script/xm.tres.gd" id="1_jx02w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1140e"]
 atlas = ExtResource("1_aq434")
@@ -43,7 +43,7 @@ animations = [{
 size = Vector2(192, 64)
 
 [node name="XM" type="Sprite2D"]
-script = ExtResource("1_pw43j")
+script = ExtResource("1_jx02w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6bbdc")
