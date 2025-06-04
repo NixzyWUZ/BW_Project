@@ -254,6 +254,5 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("7_dhau6")]
-volume_db = -80.0
 
 [connection signal="body_entered" from="World/Areas/Event" to="World/Areas/Event" method="_on_body_entered"]

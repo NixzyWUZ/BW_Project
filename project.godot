@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="LilProjectBW(Demo)"
+config/name="LilProjectBW(Full)"
 config/version="(Aplha)"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
@@ -19,6 +19,7 @@ config/icon="res://Cursor-1.png.png"
 [autoload]
 
 GlobalAnimation="*res://Scenes/global_animation.gd"
+Global="*res://global.gd"
 
 [display]
 

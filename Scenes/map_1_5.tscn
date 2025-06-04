@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cjt8pxak1sjh0"]
+[gd_scene load_steps=18 format=4 uid="uid://cjt8pxak1sjh0"]
 
 [ext_resource type="Texture2D" uid="uid://075mq38lx76y" path="res://Sprites/Tile/CloudBG-1.png.png" id="1_3uxko"]
 [ext_resource type="Texture2D" uid="uid://d2espqi28vpst" path="res://Sprites/BG_Parallax/parallax2-1.png.png" id="2_71ipq"]
@@ -9,9 +9,124 @@
 [ext_resource type="PackedScene" uid="uid://ca5c0ervs00qt" path="res://qz.tscn" id="7_7pcyx"]
 [ext_resource type="Script" path="res://Script/end_map_1.gd" id="7_wu32x"]
 [ext_resource type="PackedScene" uid="uid://4qrv5d6pd8wu" path="res://music.tscn" id="8_kiht0"]
+[ext_resource type="Script" path="res://Scenes/dialogs.gd" id="10_if5t5"]
+[ext_resource type="Texture2D" uid="uid://u8i0amerdrm5" path="res://Sprites/UI/Dialog/dialog_box.png" id="11_hmalr"]
+[ext_resource type="Theme" uid="uid://3a7caip40xij" path="res://Scenes/Font.tres" id="12_stumm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hais"]
 size = Vector2(661, 512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txad4"]
+size = Vector2(288, 96)
+
+[sub_resource type="Animation" id="Animation_5noop"]
+resource_name = "D1"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogs/D1/VBoxContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Pessoa Desconhecida"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogs/D1/VBoxContainer/RichTextLabel:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Está chegando. Continue mais a frente e se encontrará conosco"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dialogs/D1/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.25, 0.25, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Dialogs/D1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ep67n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogs/D1/VBoxContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Pessoa Desconhecida"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogs/D1/VBoxContainer/RichTextLabel:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Está chegando. Continue mais a frente e se encontrará conosco"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dialogs/D1/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Dialogs/D1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efeqm"]
+_data = {
+"D1": SubResource("Animation_5noop"),
+"RESET": SubResource("Animation_ep67n")
+}
 
 [node name="Map1_5" type="Node2D"]
 
@@ -79,7 +194,7 @@ position = Vector2(336, 256)
 position = Vector2(12640, 288)
 
 [node name="Player" parent="World" instance=ExtResource("6_bl312")]
-position = Vector2(201, 256)
+position = Vector2(5472, 533)
 
 [node name="EndMap1" type="Area2D" parent="."]
 script = ExtResource("7_wu32x")
@@ -91,4 +206,48 @@ debug_color = Color(0.952875, 0, 0.388653, 0.42)
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("8_kiht0")]
 
+[node name="Dialogs" type="CanvasLayer" parent="."]
+script = ExtResource("10_if5t5")
+
+[node name="D1" type="Sprite2D" parent="Dialogs"]
+visible = false
+position = Vector2(496, 485)
+texture = ExtResource("11_hmalr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogs/D1"]
+offset_left = -144.0
+offset_top = -48.0
+offset_right = 144.0
+offset_bottom = 40.0
+theme = ExtResource("12_stumm")
+
+[node name="Label" type="Label" parent="Dialogs/D1/VBoxContainer"]
+layout_mode = 2
+text = "Pessoa Desconhecida"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogs/D1/VBoxContainer"]
+custom_minimum_size = Vector2(288, 65)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "Está chegando. Continue mais a frente e se encontrará conosco"
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="D1_Coliision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="D1_Coliision"]
+position = Vector2(6000, 560)
+shape = SubResource("RectangleShape2D_txad4")
+debug_color = Color(0.681901, 0.502732, 0, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_efeqm")
+}
+
 [connection signal="body_entered" from="EndMap1" to="EndMap1" method="_on_body_entered"]
+[connection signal="body_entered" from="D1_Coliision" to="Dialogs" method="_on_d_1_coliision_body_entered"]
+[connection signal="body_exited" from="D1_Coliision" to="Dialogs" method="_on_d_1_coliision_body_exited"]

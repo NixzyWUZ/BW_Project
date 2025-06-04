@@ -90,7 +90,7 @@ tile_set = ExtResource("9_sg3d4")
 position = Vector2(6256, 256)
 
 [node name="Player" parent="World" instance=ExtResource("11_4en61")]
-position = Vector2(128, 224)
+position = Vector2(166, 224)
 
 [node name="House_Door" type="Area2D" parent="."]
 script = ExtResource("12_l71hd")
